@@ -1,5 +1,7 @@
 import numpy as np
 import queue
+from Preprocessing import Read_Dataset
+import json
 
 class Optics:
     def __init__(self, eps= float('inf'), min_samples=5, xi= 0.05):
@@ -82,6 +84,15 @@ class Optics:
 
         return self.labels
 
+if __name__ == "__main__":
+    X= Read_Dataset("Dataset")
+    optics= Optics(min_samples= 30, xi= 21)
+    optics.fit(X)
+    labels = optics.labels
+    with open("labels_optics.json", "w") as f:
+        json.dump(labels, f)
+    print("Saved labels_optics.json")
+    pass
 
 
     

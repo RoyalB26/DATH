@@ -93,10 +93,10 @@ def dbscan(input_dir, output_dir, eps=10.0, min_samples=3, resize=(64, 64)):
         shutil.copy(path, os.path.join(output_dir, folder, os.path.basename(path)))
 
 if __name__ == "__main__":
-    input_dir = "./data/input"
-    output_dir = "./data/output_dbscan"
+    input_dir = "./Dataset"
+    output_dir = "./Data_output/output_dbscan"
 
-    dbscan(input_dir, output_dir, eps=10.0, min_samples=3)
+    dbscan(input_dir, output_dir, eps=15.0, min_samples=5)
 
 # eps: 5.0 - 15.0
 # min_samples: 3 - 5

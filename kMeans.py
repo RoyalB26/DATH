@@ -79,8 +79,8 @@ def kmeans(input_dir, output_dir, K=3, resize=(64, 64), max_iters=1000000):
 
 
 if __name__ == "__main__":
-    input_dir = "./data/input"
-    output_dir = "./data/output"
+    input_dir = "./Dataset"
+    output_dir = "./Data_output/output_kmeans"
     K = 3                    
 
     kmeans(input_dir, output_dir, K)
