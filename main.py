@@ -2,7 +2,7 @@ from optics import Optics
 from Preprocessing import Read_Dataset
 import json
 if __name__ == "__main__":
-    X= Read_Dataset("data\input")
+    X= Read_Dataset("Dataset")
     optics= Optics(min_samples= 30, xi= 21)
     optics.fit(X)
     labels = optics.labels
